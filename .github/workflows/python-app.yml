@@ -2,7 +2,7 @@ name: Daily Scrum
 
 on:
   schedule:
-    - cron: '1 20 * * *'
+    - cron: '3 20 * * *'
       timezone: Asia/Seoul
 
 jobs:
@@ -11,21 +11,21 @@ jobs:
       SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - uses: szenius/set-timezone@v1.0
-      with:
-        timezoneLinux: "Asia/Seoul"
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Asia/Seoul"
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Install dependencies
-      run: |
-        python3 -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Run main.py
-      run: |
-        python3 main.py
+      - name: Run main.py
+        run: |
+          python3 main.py
