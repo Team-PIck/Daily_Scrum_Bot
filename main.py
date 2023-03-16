@@ -2,7 +2,7 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-client = WebClient(token="xoxb-4693014614277-4927023407137-FTwmE9FmPcts1MftyuJEodXV")
+client = WebClient(token="xoxb-4693014614277-4927023407137-nySbFlBJOrdlz5WvxYjrDQJM")
 
 def send_message():
     try:
