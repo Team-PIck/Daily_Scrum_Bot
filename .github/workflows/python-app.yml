@@ -3,9 +3,6 @@ name: Daily Scrum
 on:
   schedule:
     - cron: '30 8 * * *'
-  push:
-    branches:
-      - main
 
 jobs:
   build:
