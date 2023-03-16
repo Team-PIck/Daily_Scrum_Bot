@@ -3,7 +3,7 @@ name: Daily Scrum
 on:
   schedule:
     - cron: '40 19 * * *'
-      timezone: Asia/Seoul
+    - timezone: 'Asia/Seoul'
 
 jobs:
   build:
