@@ -2,7 +2,7 @@ name: Daily Scrum
 
 on:
   schedule:
-    - cron: 28 11 * * *
+    - cron: 15 13 * * *
 
 jobs:
   build:
