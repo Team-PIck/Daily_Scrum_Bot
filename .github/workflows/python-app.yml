@@ -2,7 +2,7 @@ name: Daily Scrum
 
 on:
   schedule:
-    - cron: '35 10 * * *'
+    - cron: '39 19 * * *'
 
 jobs:
   build:
@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: "Asia/Seoul"
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
